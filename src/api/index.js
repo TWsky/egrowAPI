@@ -2,6 +2,7 @@ import { version } from '../../package.json';
 import { Router } from 'express';
 import facets from './facets';
 import findCurrencyRatio from './findCurrencyRatio';
+import goodsLikeCount from './goodsLikeCount';
 export default ({ config, db }) => {
 	let api = Router();
 
@@ -12,6 +13,10 @@ export default ({ config, db }) => {
 	// 处理货币的汇率
 	api.use('/curr', findCurrencyRatio({ config, db }));
 	
+	// 处理商品的like
+	api.use('/goods', goodsLikeCount({ config, db }));
+
+
 	// perhaps expose some API metadata at the root
 	api.get('/', (req, res) => {
 		res.json({ version });
