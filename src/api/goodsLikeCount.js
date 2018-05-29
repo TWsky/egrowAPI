@@ -22,12 +22,12 @@ export default ({ config, db }) => resource({
 
 	/** POST / - Create a new entity */
 	create({ body }, res) {
-        console.log(body.m, body.a, body.goods_id)
-        var m_Exist = body.m === 'goods'
-        var goods_attention_Exist = body.a === 'goods_attention'
-        var goods_id_Exist = body.goods_id >= 1 && typeof(+body.goods_id) !== 'String'
-        console.log(m_Exist, goods_attention_Exist, goods_id_Exist)
-		if(!m_Exist || !goods_attention_Exist || !goods_id_Exist) {
+        console.log(body.m, body.a, body.goods_id);
+        const m_Exist = (body.m === 'goods');
+        const goods_attention_Exist = (body.a === 'goods_attention');
+        const goods_id_Exist = ((body.goods_id >= 1) && (typeof(+body.goods_id) !== String));
+        console.log(m_Exist, goods_attention_Exist, goods_id_Exist);
+		if (!m_Exist || !goods_attention_Exist || !goods_id_Exist) {
             res.status(400);
             res.json({
                 "code": 1,
@@ -37,7 +37,7 @@ export default ({ config, db }) => resource({
                     "attention_num": 0,
                     "goods_id": 0
                  },
-            })
+            });
         }
         else {
             res.json({
@@ -48,13 +48,13 @@ export default ({ config, db }) => resource({
                     "attention_num": 99,
                     "goods_id": body.goods_id
                  }   
-            })
+            });
         }
 	},
 
 	/** GET /:id - Return a given entity */
 	read({ goodsLike }, res) {
-        let json = 
+        const json = 
         {
             "code": 0,
             "data": {

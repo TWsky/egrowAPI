@@ -29,13 +29,13 @@ export default ({ config, db }) => resource({
 
 	/** GET /:id - Return a given entity */
 	read({ currency }, res) {
-        let json = 
-        {
-            "code": 0,
-            "status": "OK",
-            "currency": Object.keys(currency)[0],
-            "ratio": currency[Object.keys(currency)[0]]
-        }
+    const json = 
+			{
+				"code": 0,
+				"status": "OK",
+				"currency": Object.keys(currency)[0],
+				"ratio": currency[Object.keys(currency)[0]]
+			};
 		res.json(json);
 	},
 
