@@ -21,8 +21,7 @@ export default ({ config, db }) => resource({
 	},
 
 	/** POST / - Create a new entity */
-	create({ query }, res) {
-        let body = query;
+	create({ body }, res) {
         console.log(body.m, body.a, body.goods_id)
         var m_Exist = body.m === 'goods'
         var goods_attention_Exist = body.a === 'goods_attention'
