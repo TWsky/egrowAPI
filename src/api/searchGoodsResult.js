@@ -39,7 +39,8 @@ export default ({ config, db }) => resource({
             "status": "OK",
             "items": [
                 {"predictions": searchResult}
-            ]
+            ],
+            "counts": searchResult.length,
         }
         res.json(json);
     }
