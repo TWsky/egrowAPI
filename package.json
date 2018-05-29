@@ -8,7 +8,8 @@
     "build": "babel src -s -D -d dist --presets es2015,stage-0",
     "start": "node dist",
     "prestart": "npm run -s build",
-    "test": "eslint src"
+    "test": "eslint src",
+    "deploy": "gcloud app deploy"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
@@ -17,7 +18,7 @@
       "sourceType": "module"
     },
     "env": {
-      "node": true
+      "node": ">=4.3.2"
     },
     "rules": {
       "no-console": 0,
@@ -35,13 +36,16 @@
     "express": "^4.13.3",
     "htmlparser": "^1.7.7",
     "morgan": "^1.8.0",
-    "resource-router-middleware": "^0.6.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.9.0",
+    "resource-router-middleware": "^0.6.0",
+    "babel-cli": "^6.23.0",
     "babel-core": "^6.9.0",
+    "babel-polyfill": "^6.0.16",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-0": "^6.5.0",
+    "babel-plugin-transform-runtime": "^6.23.0"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "2.2.1",
     "eslint": "^3.1.1",
     "nodemon": "^1.9.2"
   }

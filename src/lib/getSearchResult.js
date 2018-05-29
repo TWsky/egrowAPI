@@ -1,8 +1,6 @@
-import axios from 'axios'
-import  htmlparser from 'htmlparser'
-import util from 'util'
-
-
+import axios from 'axios';
+import  htmlparser from 'htmlparser';
+import util from 'util';
 
 export function getSearchResult(commonParams) {
     // 定义的搜索地址
