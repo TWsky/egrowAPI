@@ -17,7 +17,12 @@ export default ({ config, db }) => resource({
 
 	/** GET / - List all entities */
 	index({ params }, res) {
-		res.json(currencyJSON);
+        res.status(400);
+		res.json({
+            "code": 1,
+            "status": "failed",
+            "msg": "Bad request!You should use the POST method!"
+        });
 	},
 
 	/** POST / - Create a new entity */
