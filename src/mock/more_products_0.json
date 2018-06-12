@@ -1,0 +1,35 @@
+{
+  "code": 0,
+  "status": "OK",
+  "items": [
+    {
+      "img": "https://gloimg.rglcdn.com/rosegal/pdm-product-pic/Clothing/2018/03/28/goods-img/1523301185945975469.jpg",
+      "shop-price": "$11.90",
+      "market-price": "$24.37",
+      "goods-title": "Plus Size High Waisted Cutout Swim Bottom - BLACK - 2XL",
+      "url": "https://m.rosegal.com/plus-size-swim-bottoms/plus-size-high-waisted-cutout-swim-bottom-2168331.html"
+    },
+    {
+      "img": "https://gloimg.rglcdn.com/rosegal/pdm-product-pic/Clothing/2017/05/08/goods-img/1519757957330355444.jpg",
+      "shop-price": "$23.78",
+      "market-price": "",
+      "goods-title": "Floral Underwire Plus Size High Waist Bikini Swimsuit with Push Up Bra - BLACK - 2XL",
+      "url": "https://m.rosegal.com/plus-size-bikinis/floral-underwire-plus-size-high-1138705.html"
+    },
+    {
+      "img": "https://gloimg.rglcdn.com/rosegal/pdm-product-pic/Clothing/2018/01/06/goods-img/1515201184981976114.jpg",
+      "shop-price": "$23.89",
+      "market-price": "",
+      "goods-title": "Printed Plus Size Tier Flounce Tankini Set - COLORMIX - 3XL",
+      "url": "https://m.rosegal.com/plus-size-tankinis/printed-plus-size-tier-flounce-tankini-set-1900263.html"
+    },
+    {
+      "img": "https://gloimg.rglcdn.com/rosegal/pdm-product-pic/Clothing/2017/06/24/goods-img/1500938705704666833.jpg",
+      "shop-price": "$19.25",
+      "market-price": "",
+      "goods-title": "Plus Size Padded Stripe Flounce High Waist Bikini Bathing Suit - ORANGEPINK - 3XL",
+      "url": "https://m.rosegal.com/plus-size-bikinis/plus-size-padded-stripe-flounce-1193986.html"
+    }
+  ],
+  "hasMorePages": true
+}

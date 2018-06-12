@@ -1,0 +1,35 @@
+{
+  "code": 0,
+  "status": "OK",
+  "items": [
+    {
+      "img": "https://gloimg.rglcdn.com/rosegal/pdm-product-pic/Clothing/2018/01/24/goods-img/1516756608491401404.jpg",
+      "shop-price": "$26.46",
+      "market-price": "",
+      "goods-title": "Aztec Print Plus Size Strappy Bikini with Tank Top - BLACK - 5XL",
+      "url": "https://m.rosegal.com/plus-size-tankinis/aztec-print-plus-size-strappy-bikini-with-tank-top-1989022.html"
+    },
+    {
+      "img": "https://gloimg.rglcdn.com/rosegal/pdm-product-pic/Clothing/2018/01/12/goods-img/1516404458046857324.jpg",
+      "shop-price": "$20.88",
+      "market-price": "",
+      "goods-title": "Plus Size Batwing Sleeve Floral Beach Cover Ups - BLACK - 5XL",
+      "url": "https://m.rosegal.com/plus-size-cover-ups/plus-size-batwing-sleeve-floral-beach-cover-ups-1976854.html"
+    },
+    {
+      "img": "https://gloimg.rglcdn.com/rosegal/pdm-product-pic/Clothing/2016/12/02/goods-img/1480643918738539098.jpg",
+      "shop-price": "$24.77",
+      "market-price": "",
+      "goods-title": "Floral and Polka Dot Padded Bikini - WHITE - 2XL",
+      "url": "https://m.rosegal.com/plus-size-swimwear/floral-and-polka-dot-padded-964448.html"
+    },
+    {
+      "img": "https://gloimg.rglcdn.com/rosegal/pdm-product-pic/Clothing/2018/05/03/goods-img/1525807428926772524.jpg",
+      "shop-price": "$27.89",
+      "market-price": "$42.21",
+      "goods-title": "Plus Size Flower Cold Shoulder Swimsuit - MULTI - 4X",
+      "url": "https://m.rosegal.com/plus-size-one-pieces/plus-size-flower-cold-shoulder-swimsuit-2210420.html"
+    }
+  ],
+  "hasMorePages": false
+}
