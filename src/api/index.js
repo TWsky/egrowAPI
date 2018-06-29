@@ -4,9 +4,43 @@ import facets from './facets';
 import findCurrencyRatio from './findCurrencyRatio';
 import goodsLikeCount from './goodsLikeCount';
 import searchGoodsResult from './searchGoodsResult';
+import currencyList from '../mock/flatCurrency.js';
 import moreProducts_0 from '../mock/more_products_0.json';
 import moreProducts_1 from '../mock/more_products_1.json';
 import products from '../mock/products.json';
+
+const curExtractor = (Region) => {
+	return currencyList[Region] || 1;
+};
+
+const priceExtractor = (price) => {
+	if (price.length !== 0) {
+		return parseFloat(price.split('$')[1]);
+	} else {
+		return null;
+	}
+}
+
+const mkPriceString = (price, reg) => {
+	if (!price) {
+		return '';
+	} else {
+		return `$${(price * curExtractor(reg)).toFixed(2)}`;
+	}
+}
+
+const mapProductPrice = (product, curStr) => {
+	return {
+		...product,
+		items: product.items.map(item => {
+			return {
+				...item,
+				['shop-price']: mkPriceString(priceExtractor(item['shop-price']), curStr),
+				['market-price']: mkPriceString(priceExtractor(item['market-price']), curStr)
+			};
+		}),
+	};
+}
 
 export default ({ config, db }) => {
 	let api = Router();
@@ -26,17 +60,23 @@ export default ({ config, db }) => {
 
 	// GET Product
 	api.get('/products', (req, res) => {
-		res.json(products);
+		res.json(
+			mapProductPrice(products, req.query.cur)
+		);
 	})
 
 	// Get More Product with queryStr [moreItemsIndex]
 	api.get('/more_products', (req, res) => {
 		switch(req.query.moreItemsIndex) {
 			case '0':
-				res.json(moreProducts_0);
+				res.json(
+					mapProductPrice(moreProducts_0, req.query.cur)
+				);
 				break;
 			case '1':
-				res.json(moreProducts_1);
+				res.json(
+					mapProductPrice(moreProducts_1, req.query.cur)
+				);
 				break;
 			default:
 				res.json({
