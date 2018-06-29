@@ -69,10 +69,14 @@ export default ({ config, db }) => {
 	api.get('/more_products', (req, res) => {
 		switch(req.query.moreItemsIndex) {
 			case '0':
-				res.json(moreProducts_0);
+				res.json(
+					mapProductPrice(moreProducts_0, req.query.cur)
+				);
 				break;
 			case '1':
-				res.json(moreProducts_1);
+				res.json(
+					mapProductPrice(moreProducts_1, req.query.cur)
+				);
 				break;
 			default:
 				res.json({
