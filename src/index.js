@@ -16,12 +16,20 @@ app.use(morgan('dev'));
 
 // 3rd party middleware
 app.use(cors({
-	exposedHeaders: config.corsHeaders
+	origin: config.corsHeaders,
+	credentials: true,
+	exposedHeaders: config.exposedHeaders,
+	
 }));
 
 app.use(bodyParser.json({
 	limit : config.bodyLimit
 }));
+
+app.use((req, res, next) => {
+	res.setHeader("AMP-Access-Control-Allow-Source-Origin", "https://ampify.ga");
+	return next();
+})
 
 // connect to db
 initializeDb( db => {

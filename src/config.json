@@ -1,5 +1,11 @@
 {
 	"port": 8080,
 	"bodyLimit": "100kb",
-	"corsHeaders": ["Link"]
+	"corsHeaders": [
+		"https://amp-track.firebaseapp.com",
+		"https://ampify.ga",
+		"https://ampify-ga.cdn.ampproject.org",
+		"https://cdn.ampproject.org"
+	],
+	"exposedHeaders": "AMP-Access-Control-Allow-Source-Origin"
 }
